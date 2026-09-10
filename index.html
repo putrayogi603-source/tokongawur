@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>online shop ngawurr</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f1e8;
+            color: #333;
+        }
+
+        header {
+            background: #31572c;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #588157, #344e41);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(35px, 7vw, 60px);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #f4d35e;
+            color: #333;
+            padding: 13px 28px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .produk {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 55px 0;
+        }
+
+        .judul {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .judul h2 {
+            color: #31572c;
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .produk-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .isi {
+            padding: 20px;
+        }
+
+        .isi h3 {
+            color: #31572c;
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .isi p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .harga {
+            color: #bc6c25;
+            font-size: 21px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .beli {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #31572c;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .beli:hover {
+            background: #588157;
+        }
+
+        .tentang {
+            background: white;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .tentang h2 {
+            color: #31572c;
+            margin-bottom: 15px;
+        }
+
+        .tentang p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        /* KONTAK WHATSAPP */
+        .whatsapp {
+            text-align: center;
+            padding: 45px 20px;
+            background: #d9ed92;
+        }
+
+        .whatsapp h2 {
+            color: #31572c;
+            margin-bottom: 10px;
+        }
+
+        .whatsapp p {
+            margin-bottom: 20px;
+        }
+
+        .wa-btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 14px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .wa-btn:hover {
+            background: #1ebe5d;
+        }
+
+        footer {
+            background: #283618;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .hero {
+                padding: 60px 15px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .card img {
+                height: 240px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">🏘toko ngaworrr</div>
+
+        <nav>
+            <a href="#beranda">Beranda</a>
+            <a href="#produk">Produk</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+    </header>
+
+
+    <!-- BERANDA -->
+    <section class="hero" id="beranda">
+        <h1>toko nguwawurr</h1>
+
+        <p>
+            Nikmati produk kita yang limitit
+        </p>
+
+        <a href="#produk" class="btn">
+            Belanja Sekarang
+        </a>
+    </section>
+
+
+    <!-- PRODUK -->
+    <section class="produk" id="produk">
+
+        <div class="judul">
+            <h2>Produk Kami</h2>
+            <p>Pilih teh favoritmu</p>
+        </div>
+
+        <div class="produk-grid">
+
+            <!-- TEH TAWAR -->
+            <div class="card">
+
+                <img src="images/teh-tawar.jpg"
+                     alt="Teh Tawar">
+
+                <div class="isi">
+                    <h3>Teh Tawar</h3>
+
+                    <p>
+                        Teh pilihan dengan rasa alami,
+                        ringan, dan menyegarkan.
+                        Cocok dinikmati kapan saja.
+                    </p>
+
+                    <div class="harga">
+                        Rp5.000
+                    </div>
+
+                    <button class="beli"
+                        onclick="beli('Teh Tawar', 5000)">
+                        Beli Sekarang
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- KERES -->
+            <div class="card">
+
+                <img src="images/keres.jpg"
+                     alt="Keres">
+
+                <div class="isi">
+                    <h3>Keres</h3>
+
+                    <p>
+                        Teh dengan cita rasa khas
+                        yang nikmat untuk menemani
+                        waktu santai.
+                    </p>
+
+                    <div class="harga">
+                        Rp7.000
+                    </div>
+
+                    <button class="beli"
+                        onclick="beli('Keres', 7000)">
+                        Beli Sekarang
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- LADY COMPANION -->
+            <div class="card">
+
+                <img src="images/lady-companion.jpg"
+                     alt="Lady Companion">
+
+                <div class="isi">
+                    <h3>Lady Companion</h3>
+
+                    <p>
+                        Teh pilihan dengan aroma lembut
+                        dan rasa yang nikmat untuk
+                        menemani waktu bersantai.
+                    </p>
+
+                    <div class="harga">
+                        Rp10.000
+                    </div>
+
+                    <button class="beli"
+                        onclick="beli('Lady Companion', 10000)">
+                        Beli Sekarang
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- TENTANG -->
+    <section class="tentang" id="tentang">
+
+        <h2>Tentang Teh Kita</h2>
+
+        <p>
+            Teh Kita menyediakan berbagai pilihan teh
+            dengan harga terjangkau untuk menemani
+            waktu santai dan aktivitas sehari-hari.
+        </p>
+
+    </section>
+
+
+    <!-- WHATSAPP -->
+    <section class="whatsapp" id="kontak">
+
+        <h2>Pesan Sekarang</h2>
+
+        <p>
+            Hubungi kami melalui WhatsApp:
+            <strong>+62 857-7007-6570</strong>
+        </p>
+
+        <a
+            class="wa-btn"
+            href="https://wa.me/6285770076570"
+            target="_blank">
+            💬 Chat WhatsApp
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Teh Kita | Toko Teh Online
+        </p>
+
+        <p>
+            WhatsApp: +62 857-7007-6570
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        function beli(nama, harga) {
+
+            let jumlah = prompt(
+                "Masukkan jumlah " +
+                nama +
+                " yang ingin dibeli:"
+            );
+
+            if (jumlah === null || jumlah === "") {
+                return;
+            }
+
+            jumlah = parseInt(jumlah);
+
+            if (isNaN(jumlah) || jumlah <= 0) {
+
+                alert("Jumlah tidak valid!");
+
+                return;
+            }
+
+            let total = harga * jumlah;
+
+            let pesan =
+                "Halo Teh Kita, saya ingin memesan:%0A%0A" +
+                "Produk: " + nama + "%0A" +
+                "Jumlah: " + jumlah + "%0A" +
+                "Total: Rp" +
+                total.toLocaleString("id-ID");
+
+            window.open(
+                "https://wa.me/6285770076570?text=" + pesan,
+                "_blank"
+            );
+        }
+
+    </script>
+
+</body>
+</html>
